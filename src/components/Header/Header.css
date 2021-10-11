@@ -1,0 +1,93 @@
+.App > .Header {
+  height: 60px;
+  background: var(--navbar-background);
+  align-items: center;
+  transition: all 0.2s ease-out;
+}
+
+.App > .Header > .button {
+  min-width: 40px;
+  height: 40px;
+  background: var(--navbar-item-hover-background);
+  border-radius: var(--border-radius);
+  margin-left: 10px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.App > .Header > .menu {
+  justify-content: flex-start;
+  height: 60px;
+  min-width: 60px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  display: none;
+}
+
+.App > .Header > .brand {
+  height: 60px;
+}
+
+.App > .Header > .brand > .icon {
+  height: 60px;
+  min-width: 60px;
+  justify-content: center;
+  align-items: center;
+}
+
+.App > .Header > .brand > .name {
+  justify-content: center;
+  align-items: center;
+}
+
+.App > .Header > .token {
+  height: 40px;
+  background: var(--block-background);
+  border-radius: var(--border-radius);
+  margin-left: 10px;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.App > .Header > .token > .address {
+  padding: 0 15px 0 15px;
+}
+
+.App > .Header > .token > .price {
+  background: #FB2715;
+  height: 40px;
+  border-radius: var(--border-radius);
+  padding: 0 15px 0 8px;
+  align-items: center;
+  flex-direction: row;
+}
+
+.App > .Header > .token > .price > .icon {
+  background: rgba(255, 255, 255, 0.4);
+  height: 26px;
+  width: 26px;
+  border-radius: 50%;
+  margin-right: 6px;
+  justify-content: center;
+  align-items: center;
+}
+
+.App > .Header > .token > .price > .value {
+  color: white;
+}
+
+@media only screen and (max-width: 640px) {
+  .App > .Header > .token > .address {
+    display: none;
+  }
+
+  .App > .Header > .menu {
+    display: flex;
+  }
+
+  .App > .Header > .brand {
+    display: none;
+  }
+}

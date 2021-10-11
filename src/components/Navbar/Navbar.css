@@ -1,0 +1,95 @@
+.App .Navbar {
+  width: 60px;
+  min-width: 60px;
+  max-width: 60px;
+  background: var(--navbar-background);
+  align-items: flex-start;
+  height: 100vh;
+  overflow: hidden;
+  overflow-y: auto;
+  transition: all 0.2s ease-out;
+}
+
+.App .Navbar:hover {
+  width: 320px;
+  min-width: 320px;
+  max-width: 320px;
+}
+
+.App .Navbar > .item {
+  position: relative;
+  height: 60px;
+  width: 100%;
+  border-left: 0 solid transparent;
+}
+
+.App .Navbar > .item.active {
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+}
+
+.App .Navbar > .item.active:hover {
+  background: var(--navbar-item-hover-background);
+  border-left: 4px solid transparent;
+}
+
+.App .Navbar > .item.current {
+  background: var(--content-background);
+  border-left: 4px solid red;
+}
+
+.App .Navbar > .item.current:hover {
+  background: var(--content-background);
+  border-left: 4px solid red;
+}
+
+.App .Navbar > .item > .icon {
+  width: 60px;
+  min-width: 60px;
+  height: 60px;
+  align-items: center;
+  justify-content: center;
+}
+
+.App .Navbar > .item > .text {
+  position: absolute;
+  top: 0;
+  left: 60px;
+  height: 60px;
+  align-items: center;
+  padding-right: 15px;
+  white-space: nowrap;
+}
+
+.App .Navbar > .brand > .close {
+  display: none;
+}
+
+@media only screen and (max-width: 640px) {
+  .App .Navbar {
+    width: 0;
+    min-width: 0;
+    max-width: 0;
+  }
+
+  .App .Navbar:hover {
+    width: 0;
+    min-width: 0;
+    max-width: 0;
+  }
+
+  .App .Navbar.visible {
+    width: 100vw;
+    min-width: 100vw;
+    max-width: 100vw;
+  }
+
+  .App .Navbar > .brand > .close {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+  }
+}

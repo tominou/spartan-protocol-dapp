@@ -1,0 +1,25 @@
+.Layout-column {
+  flex-direction: column;
+}
+
+.Layout-row {
+  flex-direction: row;
+}
+
+.Layout-headline-1 {
+  flex-direction: row;
+  font-family: 'Kreon', sans-serif;
+  font-size: 30px;
+}
+
+.Layout-headline-2 {
+  flex-direction: row;
+  font-family: 'Kreon', sans-serif;
+  font-size: 26px;
+}
+
+.Layout-headline-3 {
+  flex-direction: row;
+  font-family: 'Kreon', sans-serif;
+  font-size: 22px;
+}

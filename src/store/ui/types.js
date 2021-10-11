@@ -1,0 +1,4 @@
+export const TOGGLE_NAVBAR_VISIBILITY = 'TOGGLE_NAVBAR_VISIBILITY'
+export const TOGGLE_THEME = 'TOGGLE_THEME'
+export const UI_LOADING = 'UI_LOADING'
+export const UI_ERROR = 'UI_ERROR'
