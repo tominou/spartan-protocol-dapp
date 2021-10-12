@@ -28,7 +28,7 @@ div {
   --content-background: #000;
   --navbar-background: #25212D;
   --navbar-item-hover-background: rgba(255, 255, 255, 0.05);
-  --block-background: rgba(255, 255, 255, 0.08);
+  --card-background: rgba(255, 255, 255, 0.08);
   color: white;
 }
 
@@ -37,7 +37,7 @@ div {
   --content-background: #d5deed;
   --navbar-background: white;
   --navbar-item-hover-background: rgba(0, 0, 0, 0.05);
-  --block-background: white;
+  --card-background: white;
   color: black;
 }
 

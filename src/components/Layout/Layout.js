@@ -26,6 +26,10 @@ export const Row = (props) => {
   return <Element classLayout='Layout-row' {...props} />
 }
 
+export const Card = (props) => {
+  return <Element classLayout='Layout-card' {...props} />
+}
+
 export const Headline = (props) => {
   return <Element classLayout={'Layout-headline-' + props.size || 1} {...props} />
 }

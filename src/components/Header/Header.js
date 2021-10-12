@@ -12,7 +12,7 @@ const Header = () => {
   const navbarVisible = useNavbarVisibility()
 
   return (
-    <Row className="Header">
+    <Row className={'Header ' + (navbarVisible ? ' nav' : '')}>
       <div className="menu" onClick={() => dispatch(toggleNavbar())}>
         <Icon
           icon={navbarVisible ? 'close' : 'menuClose'}
@@ -31,20 +31,22 @@ const Header = () => {
         <Headline size={3} className="name">Spartan Protocol</Headline>
       </Row>
       <div style={{ flex: 1 }} />
-      <div className="button"></div>
-      <div className="button"></div>
-      <ThemeSwitcher />
-      <Row className="token">
-        <div className="address">0xe4ae305ebe1ab...</div>
-        <Row className="price">
-          <div className="icon">
-            <Icon
-              icon="spartav2"
-              fill={'white'}
-              size="34"
-            />
-          </div>
-          <div className="value">$0.52</div>
+      <Row className='toolbar'>
+        <div className="button"></div>
+        <div className="button"></div>
+        <ThemeSwitcher />
+        <Row className="token">
+          <div className="address">0xe4ae305ebe1ab...</div>
+          <Row className="price">
+            <div className="icon">
+              <Icon
+                icon="spartav2"
+                fill={'white'}
+                size="34"
+              />
+            </div>
+            <div className="value">$0.52</div>
+          </Row>
         </Row>
       </Row>
     </Row>

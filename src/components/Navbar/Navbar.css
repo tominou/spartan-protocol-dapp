@@ -83,13 +83,4 @@
     min-width: 70vw;
     max-width: 70vw;
   }
-
-  .App .Navbar > .brand > .close {
-    width: 60px;
-    height: 60px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    display: flex;
-  }
 }

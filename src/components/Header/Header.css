@@ -5,17 +5,6 @@
   transition: all 0.2s ease-out;
 }
 
-.App > .Header > .button {
-  min-width: 40px;
-  height: 40px;
-  background: var(--navbar-item-hover-background);
-  border-radius: var(--border-radius);
-  margin-left: 10px;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-}
-
 .App > .Header > .menu {
   justify-content: flex-start;
   height: 60px;
@@ -37,25 +26,36 @@
   align-items: center;
 }
 
+.App > .Header > .toolbar > .button {
+  min-width: 40px;
+  height: 40px;
+  background: var(--navbar-item-hover-background);
+  border-radius: var(--border-radius);
+  margin-left: 10px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
 .App > .Header > .brand > .name {
   justify-content: center;
   align-items: center;
 }
 
-.App > .Header > .token {
+.App > .Header > .toolbar > .token {
   height: 40px;
-  background: var(--block-background);
+  background: var(--card-background);
   border-radius: var(--border-radius);
   margin-left: 10px;
   align-items: center;
   margin-right: 10px;
 }
 
-.App > .Header > .token > .address {
+.App > .Header > .toolbar > .token > .address {
   padding: 0 15px 0 15px;
 }
 
-.App > .Header > .token > .price {
+.App > .Header > .toolbar > .token > .price {
   background: #FB2715;
   height: 40px;
   border-radius: var(--border-radius);
@@ -64,7 +64,7 @@
   flex-direction: row;
 }
 
-.App > .Header > .token > .price > .icon {
+.App > .Header > .toolbar > .token > .price > .icon {
   background: rgba(255, 255, 255, 0.4);
   height: 26px;
   width: 26px;
@@ -74,12 +74,12 @@
   align-items: center;
 }
 
-.App > .Header > .token > .price > .value {
+.App > .Header > .toolbar > .token > .price > .value {
   color: white;
 }
 
 @media only screen and (max-width: 640px) {
-  .App > .Header > .token > .address {
+  .App > .Header > .toolbar > .token > .address {
     display: none;
   }
 
@@ -88,6 +88,38 @@
   }
 
   .App > .Header > .brand {
-    display: none;
+    position: absolute;
+    top: -60px;
+    left: 60px;
+    transition: all 0.2s ease-out;
+    width: calc(100vw - 120px);
+    opacity: 0;
+  }
+
+  .App > .Header.nav > .brand {
+    top: 0;
+    opacity: 1;
+    flex-direction: row-reverse;
+    justify-content: center;
+  }
+
+  .App > .Header.nav > .brand > .icon {
+    position: absolute;
+    top: 0;
+    right: -60px;
+  }
+
+  .App > .Header > .toolbar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: all 0.2s ease-out;
+    height: 60px;
+    align-items: center;
+  }
+
+  .App > .Header.nav > .toolbar {
+    top: 30px;
+    opacity: 0;
   }
 }

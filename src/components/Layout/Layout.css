@@ -6,6 +6,11 @@
   flex-direction: row;
 }
 
+.Layout-card {
+  border-radius: var(--border-radius);
+  background: var(--card-background);
+}
+
 .Layout-headline-1 {
   flex-direction: row;
   font-family: 'Kreon', sans-serif;
