@@ -1,6 +1,6 @@
 import './Navbar.css'
-import { Icon } from '../../../components/Icons/Icons'
-import { Col, Row } from '../../../components/Layout/Layout'
+import { Icon } from '../../../utils/components/Icons/Icons'
+import { Col, Row } from '../../../utils/components/Layout/Layout'
 import { routes } from '../../../routes'
 import { useHistory, useLocation } from 'react-router-dom'
 import { useNavbarVisibility, useTheme } from '../../../store/ui/selector'

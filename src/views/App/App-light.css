@@ -4,4 +4,5 @@ body.theme-light {
   --navbar-background: white;
   --navbar-item-hover-background: rgba(0, 0, 0, 0.05);
   --card-background: white;
+  --button1-background: #aacdff;
 }

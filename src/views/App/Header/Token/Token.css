@@ -1,0 +1,41 @@
+.App > .Header > .toolbar > .token {
+  height: 40px;
+  background: var(--navbar-item-hover-background);
+  border-radius: var(--border-radius);
+  margin-left: 10px;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.App > .Header > .toolbar > .token > .address {
+  padding: 0 15px 0 15px;
+}
+
+.App > .Header > .toolbar > .token > .price {
+  background: var(--button1-background);
+  height: 40px;
+  border-radius: var(--border-radius);
+  align-items: center;
+  flex-direction: row;
+}
+
+.App > .Header > .toolbar > .token > .price > .icon-arrow {
+  margin-right: 8px;
+  margin-left: 10px;
+}
+
+.App > .Header > .toolbar > .token > .price > .icon-fee {
+  margin-right: 10px;
+  margin-left: 4px;
+  margin-top: -3px;
+}
+
+.App > .Header > .toolbar > .token > .price > .value {
+  color: var(--font-color);
+}
+
+@media only screen and (max-width: 640px) {
+  .App > .Header > .toolbar > .token > .address {
+    display: none;
+  }
+}

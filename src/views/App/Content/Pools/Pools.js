@@ -1,4 +1,4 @@
-import { Card, Col, Headline, Row, Tabs } from '../../../../components/Layout/Layout'
+import { Card, Col, Headline, Row, Tabs } from '../../../../utils/components/Layout/Layout'
 import './Pool.css'
 import Overview from './Overview/Overview'
 

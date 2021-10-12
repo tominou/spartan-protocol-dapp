@@ -1,7 +1,7 @@
 import * as Types from './types'
 
 const initialState = {
-  theme: 'dark',
+  theme: window.localStorage.getItem('theme') || 'dark',
   navbarVisibility: false,
   error: null,
   loading: false,

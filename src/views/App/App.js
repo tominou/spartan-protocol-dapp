@@ -1,7 +1,7 @@
 import Content from './Content/Content'
 import Header from './Header/Header'
 import Navbar from './Navbar/Navbar'
-import { Col, Row } from '../../components/Layout/Layout'
+import { Col, Row } from '../../utils/components/Layout/Layout'
 import './App.css'
 import './App-dark.css'
 import './App-fonts.css'

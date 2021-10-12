@@ -1,7 +1,8 @@
 import './Header.css'
-import { Icon } from '../../../components/Icons/Icons'
-import { Headline, Row } from '../../../components/Layout/Layout'
+import { Icon } from '../../../utils/components/Icons/Icons'
+import { Headline, Row } from '../../../utils/components/Layout/Layout'
 import ThemeSwitcher from './ThemeSwitcher'
+import Token from './Token/Token'
 import { useNavbarVisibility, useTheme } from '../../../store/ui/selector'
 import { toggleNavbarVisibility as toggleNavbar } from '../../../store/ui/actions'
 import { useDispatch } from 'react-redux'
@@ -35,19 +36,7 @@ const Header = () => {
         <div className="button"></div>
         <div className="button"></div>
         <ThemeSwitcher />
-        <Row className="token">
-          <div className="address">0xe4ae305ebe1ab...</div>
-          <Row className="price">
-            <div className="icon">
-              <Icon
-                icon="spartav2"
-                fill={'white'}
-                size="34"
-              />
-            </div>
-            <div className="value">$0.52</div>
-          </Row>
-        </Row>
+        <Token />
       </Row>
     </Row>
   )

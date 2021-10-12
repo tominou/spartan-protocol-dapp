@@ -1,5 +1,5 @@
 import './Content.css'
-import { Col, Row } from '../../../components/Layout/Layout'
+import { Col, Row } from '../../../utils/components/Layout/Layout'
 import { Route, Switch, Redirect } from 'react-router-dom'
 import { routes } from '../../../routes'
 import Liquidity from './Liquidity/Liquidity'

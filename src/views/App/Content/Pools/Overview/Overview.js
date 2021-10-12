@@ -1,4 +1,4 @@
-import { Card, Col, Headline, Row, Tabs } from '../../../../../components/Layout/Layout'
+import { Card, Col, Headline, Row, Tabs } from '../../../../../utils/components/Layout/Layout'
 import './Overview.css'
 // import { useState } from 'react'
 
@@ -35,7 +35,7 @@ const Overview = () => {
   return (
     <Col className='Overview'>
       {list.map(pool => (
-        <Card>
+        <Card key={pool}>
           {pools[pool].title}
         </Card>
       ))}

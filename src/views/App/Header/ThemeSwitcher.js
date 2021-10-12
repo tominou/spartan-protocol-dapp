@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import './Header.css'
-import { Icon } from '../../../components/Icons/Icons'
-import { Row } from '../../../components/Layout/Layout'
+import { Icon } from '../../../utils/components/Icons/Icons'
+import { Row } from '../../../utils/components/Layout/Layout'
 import { useTheme } from '../../../store/ui/selector'
 import { toggleTheme as toggle } from '../../../store/ui/actions'
 import { useDispatch } from 'react-redux'
@@ -11,9 +11,10 @@ const ThemeSwitcher = () => {
   const theme = useTheme()
 
   useEffect(() => {
-    console.log('theme', theme)
+    // console.log('theme', theme)
     document.body.classList.add(theme === 'dark' ? 'theme-dark' : 'theme-light')
     document.body.classList.remove(theme === 'dark' ? 'theme-light' : 'theme-dark')
+    window.localStorage.setItem('theme', theme)
   }, [theme])
 
   return (

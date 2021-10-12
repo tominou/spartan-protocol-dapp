@@ -3,6 +3,7 @@
   background: var(--navbar-background);
   align-items: center;
   transition: all 0.2s ease-out;
+  border-top: 2px solid red;
 }
 
 .App > .Header > .menu {
@@ -42,42 +43,6 @@
   align-items: center;
 }
 
-.App > .Header > .toolbar > .token {
-  height: 40px;
-  background: var(--card-background);
-  border-radius: var(--border-radius);
-  margin-left: 10px;
-  align-items: center;
-  margin-right: 10px;
-}
-
-.App > .Header > .toolbar > .token > .address {
-  padding: 0 15px 0 15px;
-}
-
-.App > .Header > .toolbar > .token > .price {
-  background: #FB2715;
-  height: 40px;
-  border-radius: var(--border-radius);
-  padding: 0 15px 0 8px;
-  align-items: center;
-  flex-direction: row;
-}
-
-.App > .Header > .toolbar > .token > .price > .icon {
-  background: rgba(255, 255, 255, 0.4);
-  height: 26px;
-  width: 26px;
-  border-radius: 50%;
-  margin-right: 6px;
-  justify-content: center;
-  align-items: center;
-}
-
-.App > .Header > .toolbar > .token > .price > .value {
-  color: white;
-}
-
 @media only screen and (max-width: 640px) {
   .App > .Header > .menu {
     display: flex;
@@ -115,9 +80,5 @@
   .App > .Header.nav > .toolbar {
     right: -60px;
     opacity: 0;
-  }
-
-  .App > .Header > .toolbar > .token > .address {
-    display: none;
   }
 }

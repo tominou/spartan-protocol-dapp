@@ -1,14 +1,15 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import Providers from './Providers'
 import App from './views/App/App'
-import store from './store/store'
-import { Provider } from 'react-redux'
+import DataManager from './utils/DataManager/DataManager'
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={store}>
+    <Providers>
+      <DataManager />
       <App />
-    </Provider>
+    </Providers>
   </React.StrictMode>,
   document.getElementById('root')
 )

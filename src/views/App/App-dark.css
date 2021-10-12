@@ -4,4 +4,5 @@ body.theme-dark {
   --navbar-background: #25212D;
   --navbar-item-hover-background: rgba(255, 255, 255, 0.05);
   --card-background: rgba(255, 255, 255, 0.08);
+  --button1-background: #605e68;
 }
