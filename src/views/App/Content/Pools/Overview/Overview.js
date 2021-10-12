@@ -35,7 +35,7 @@ const Overview = () => {
   return (
     <Col className='Overview'>
       {list.map(pool => (
-        <Card key={pool}>
+        <Card key={pool} title={pools[pool].title?.toUpperCase() || pool}>
           {pools[pool].title}
         </Card>
       ))}
