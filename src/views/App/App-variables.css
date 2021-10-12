@@ -3,11 +3,13 @@ body {
   --border-radius: 15px;
   --main-margin: 25px;
   --font-size: 14px;
+  --card-padding: 25px;
 }
 
 @media only screen and (max-width: 640px) {
   body {
     --navbar-min-width: 0px;
     --main-margin: 15px;
+    --card-padding: 15px;
   }
 }

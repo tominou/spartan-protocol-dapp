@@ -1,7 +1,8 @@
 import './Card.css'
+import { Col, Headline, Row } from '../Layout'
 
 const Card = (props) => {
-  const { className, style } = props
+  const { className, style, title } = props
 
   const newProps = {
     children: props.children || null,
@@ -14,7 +15,14 @@ const Card = (props) => {
   // console.log('Row PROPS', newProps)
 
   return (
-    <div {...newProps} />
+    <Col {...newProps} weight={1}>
+      {!!title &&
+        <Row style={{ marginBottom: 'var(--card-padding)' }}>
+          <Headline size={3}>{title}</Headline>
+        </Row>
+      }
+      {newProps.children}
+    </Col>
   )
 }
 

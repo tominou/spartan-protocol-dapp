@@ -1,0 +1,22 @@
+.Pools > .volumes {
+  margin-top: var(--main-margin);
+}
+
+.Pools > .volumes > .Layout-card:last-child {
+   margin-left: var(--main-margin);
+}
+
+.Pools > .tabs {
+  margin-top: var(--main-margin);
+}
+
+@media only screen and (max-width: 640px) {
+  .Pools > .volumes {
+    flex-direction: column;
+  }
+
+  .Pools > .volumes > .Layout-card:last-child {
+     margin-top: var(--main-margin);
+     margin-left: 0;
+  }
+}

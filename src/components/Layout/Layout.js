@@ -2,6 +2,7 @@ import CardComponent from './Card/Card'
 import ColComponent from './Col/Col'
 import HeadlineComponent from './Headline/Headline'
 import RowComponent from './Row/Row'
+import TabsComponent from './Tabs/Tabs'
 
 
 const Layout = {
@@ -18,5 +19,6 @@ export const Card = (props) => <CardComponent {...props} />
 export const Col = (props) => <ColComponent {...props} />
 export const Headline = (props) => <HeadlineComponent {...props} />
 export const Row = (props) => <RowComponent {...props} />
+export const Tabs = (props) => <TabsComponent {...props} />
 
 export default Layout

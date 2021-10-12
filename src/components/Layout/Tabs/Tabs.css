@@ -1,0 +1,22 @@
+.Layout-tabs {
+  flex-direction: column;
+}
+
+.Layout-tabs > .tabs {
+  overflow-x: auto;
+  max-width: calc(100vw - var(--main-margin) * 2);
+  margin-bottom: var(--main-margin);
+}
+
+.Layout-tabs > .tabs > .Layout-row {
+  align-items: center;
+  height: 60px;
+  margin-right: calc(var(--card-padding) * 1.5);
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid transparent;
+  cursor: pointer;
+}
+
+.Layout-tabs > .tabs > .Layout-row.focused {
+  border-bottom: 3px solid red;
+}

@@ -1,19 +1,40 @@
-import { Col, Row, Headline } from '../../../../components/Layout/Layout'
+import { Card, Col, Headline, Row, Tabs } from '../../../../components/Layout/Layout'
+import './Pool.css'
+import Overview from './Overview/Overview'
 
 const Pools = () => {
+  const tabs = {
+    pools: {
+      title: 'Overview',
+      component: <Overview />
+    },
+    positions: {
+      title: 'Positions',
+      component: <Row>positions list</Row>
+    },
+    analysis: {
+      title: 'Analysis',
+      component: <Row>analysis</Row>
+    },
+    pairs: {
+      title: 'Pairs',
+      component: <Row>pairs list</Row>
+    }
+  }
   return (
-    <Col>
+    <Col className='Pools'>
       <Headline size={1}>
         Pools
       </Headline>
-      <Row style={{ marginTop: 25 }}>
-        <div style={{ background: 'var(--card-background)', borderRadius: 'var(--border-radius)', padding: 25, flex: 1 }}>
-          Total volume
-        </div>
-        <div style={{ background: 'var(--card-background)', borderRadius: 'var(--border-radius)', padding: 25, marginLeft: 'var(--main-margin)', flex: 1 }}>
-          Total pooled
-        </div>
+      <Row className='volumes' weight={1}>
+        <Card title='Total volume'>
+          15654681 volume
+        </Card>
+        <Card title='Total pooled' weight={1}>
+          15654681 pooled
+        </Card>
       </Row>
+      <Tabs className='tabs' tabs={tabs} />
     </Col>
   )
 }
