@@ -79,10 +79,6 @@
 }
 
 @media only screen and (max-width: 640px) {
-  .App > .Header > .toolbar > .token > .address {
-    display: none;
-  }
-
   .App > .Header > .menu {
     display: flex;
   }
@@ -93,17 +89,15 @@
     left: 60px;
     transition: all 0.2s ease-out;
     width: calc(100vw - 120px);
-    opacity: 0;
-  }
-
-  .App > .Header.nav > .brand {
-    top: 0;
-    opacity: 1;
     flex-direction: row-reverse;
     justify-content: center;
   }
 
-  .App > .Header.nav > .brand > .icon {
+  .App > .Header.nav > .brand {
+    top: 0;
+  }
+
+  .App > .Header > .brand > .icon {
     position: absolute;
     top: 0;
     right: -60px;
@@ -119,7 +113,11 @@
   }
 
   .App > .Header.nav > .toolbar {
-    top: 30px;
+    right: -60px;
     opacity: 0;
+  }
+
+  .App > .Header > .toolbar > .token > .address {
+    display: none;
   }
 }
