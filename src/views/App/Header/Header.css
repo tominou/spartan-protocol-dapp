@@ -78,7 +78,7 @@
   }
 
   .App > .Header.nav > .toolbar {
-    right: -60px;
+    right: 0px;
     opacity: 0;
   }
 }

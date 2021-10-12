@@ -20,4 +20,5 @@ div {
   background: var(--content-background);
   color: var(--font-color);
   font-family: 'Roboto', sans-serif;
+  overflow: hidden;
 }
