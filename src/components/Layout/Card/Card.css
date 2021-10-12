@@ -1,0 +1,4 @@
+.Layout-card {
+  border-radius: var(--border-radius);
+  background: var(--card-background);
+}

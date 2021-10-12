@@ -1,37 +1,22 @@
-import './Layout.css'
+import CardComponent from './Card/Card'
+import ColComponent from './Col/Col'
+import HeadlineComponent from './Headline/Headline'
+import RowComponent from './Row/Row'
 
-const Element = (props) => {
-  const { classLayout, className, weight } = props
 
-  if (!classLayout) return null
-  /*
-  if (weight) {
-    if (!props.style) props.style = {}
-    props.style.flex = weight
-  }
-  */
-  return (
-    <div
-      {...props}
-      className={classLayout + ' ' + (className || '')}
-    />
-  )
-}
+const Layout = {
+  // Card,
+  // Col,
+  // Headline,
+  // Row
+}/*
+export Col
+export const Row = () => Col
+export const Headline = () => Col
+export const Card = () => Col*/
+export const Card = (props) => <CardComponent {...props} />
+export const Col = (props) => <ColComponent {...props} />
+export const Headline = (props) => <HeadlineComponent {...props} />
+export const Row = (props) => <RowComponent {...props} />
 
-export const Col = (props) => {
-  return <Element classLayout='Layout-column' {...props} />
-}
-
-export const Row = (props) => {
-  return <Element classLayout='Layout-row' {...props} />
-}
-
-export const Card = (props) => {
-  return <Element classLayout='Layout-card' {...props} />
-}
-
-export const Headline = (props) => {
-  return <Element classLayout={'Layout-headline-' + props.size || 1} {...props} />
-}
-
-export default { Col, Row, Headline }
+export default Layout
