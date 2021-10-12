@@ -1,3 +1,7 @@
 .Overview > .Layout-card {
   margin-top: var(--main-margin);
 }
+
+.Overview > .Layout-card:first-child {
+  margin-top: 0;
+}
