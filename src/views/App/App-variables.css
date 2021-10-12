@@ -1,0 +1,13 @@
+body {
+  --navbar-min-width: 60px;
+  --border-radius: 15px;
+  --main-margin: 25px;
+  --font-size: 14px;
+}
+
+@media only screen and (max-width: 640px) {
+  body {
+    --navbar-min-width: 0px;
+    --main-margin: 15px;
+  }
+}

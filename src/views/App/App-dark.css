@@ -1,0 +1,7 @@
+body.theme-dark {
+  --font-color: white;
+  --content-background: #000;
+  --navbar-background: #25212D;
+  --navbar-item-hover-background: rgba(255, 255, 255, 0.05);
+  --card-background: rgba(255, 255, 255, 0.08);
+}

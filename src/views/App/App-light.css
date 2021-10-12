@@ -1,0 +1,7 @@
+body.theme-light {
+  --font-color: black;
+  --content-background: #d5deed;
+  --navbar-background: white;
+  --navbar-item-hover-background: rgba(0, 0, 0, 0.05);
+  --card-background: white;
+}

@@ -1,4 +1,4 @@
-import { Col, Row, Headline } from '../../Layout/Layout'
+import { Col, Row, Headline } from '../../../../components/Layout/Layout'
 
 const Liquidity = () => {
   return (

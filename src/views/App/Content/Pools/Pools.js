@@ -1,6 +1,4 @@
-// import Header from './Header/Header'
-// import './Pools.css'
-import { Col, Row, Headline } from '../../Layout/Layout'
+import { Col, Row, Headline } from '../../../../components/Layout/Layout'
 
 const Pools = () => {
   return (

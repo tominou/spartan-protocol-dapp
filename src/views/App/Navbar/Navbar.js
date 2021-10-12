@@ -1,10 +1,10 @@
 import './Navbar.css'
-import { Icon } from '../Icons/Icons'
-import { Col, Row } from '../Layout/Layout'
-import { routes } from '../../routes'
+import { Icon } from '../../../components/Icons/Icons'
+import { Col, Row } from '../../../components/Layout/Layout'
+import { routes } from '../../../routes'
 import { useHistory, useLocation } from 'react-router-dom'
-import { useNavbarVisibility, useTheme } from '../../store/ui/selector'
-import { toggleNavbarVisibility as toggle } from '../../store/ui/actions'
+import { useNavbarVisibility, useTheme } from '../../../store/ui/selector'
+import { toggleNavbarVisibility as toggle } from '../../../store/ui/actions'
 import { useDispatch } from 'react-redux'
 
 const Navbar = () => {

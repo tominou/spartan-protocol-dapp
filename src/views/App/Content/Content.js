@@ -1,7 +1,7 @@
 import './Content.css'
-import { Col, Row } from '../Layout/Layout'
+import { Col, Row } from '../../../components/Layout/Layout'
 import { Route, Switch, Redirect } from 'react-router-dom'
-import { routes } from '../../routes'
+import { routes } from '../../../routes'
 import Liquidity from './Liquidity/Liquidity'
 import Pools from './Pools/Pools'
 

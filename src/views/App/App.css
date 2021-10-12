@@ -1,0 +1,23 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100%;
+  overflow: hidden;
+  transition: background 0.2s ease-out;
+}
+
+div {
+  display: flex;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.App {
+  width: 100vw;
+  min-height: 100vh;
+  font-size: var(--font-size);
+  background: var(--content-background);
+  color: var(--font-color);
+  font-family: 'Roboto', sans-serif;
+}
