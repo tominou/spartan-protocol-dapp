@@ -1,4 +1,4 @@
-import { Button, Card, Col, Headline, Row, Tabs } from '../../../../../../utils/components/Layout/Layout'
+import { Button, Card, Col, Collapsable, Headline, Row, Tabs } from '../../../../../../utils/components/Layout/Layout'
 // import './Pool.css'
 import { useState } from 'react'
 import { useSelector } from 'react-redux'
@@ -104,7 +104,7 @@ const Overview = ({ asset }) => {
           />
         </Row>
       </Row>
-      {!!showDetails &&
+      <Collapsable collapsed={showDetails}>
         <Col style={{ marginTop: 'var(--card-padding)' }}>
           {details.map(info => (
             <Row style={{ height: 30, alignItems: 'center' }}>
@@ -117,8 +117,6 @@ const Overview = ({ asset }) => {
             </Row>
           ))}
         </Col>
-      }
-      {!!showDetails &&
         <Row style={{ marginTop: 'var(--card-padding)' }}>
           <Button weight={1}>
             Bond
@@ -130,7 +128,7 @@ const Overview = ({ asset }) => {
             Swap
           </Button>
         </Row>
-      }
+      </Collapsable>
     </Card>
   )
 }

@@ -1,0 +1,5 @@
+.Layout-collapsable {
+  flex-direction: column;
+  transition: max-height 0.2s ease-out;
+  overflow: hidden;
+}
