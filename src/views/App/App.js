@@ -16,7 +16,7 @@ const App = () => {
     <Router>
       <Col className='App'>
         <Header />
-        <Row>
+        <Row style={{ height: 'calc(100% - 60px)', maxHeight: 'calc(100% - 60px)' }}>
           <Navbar />
           <Content />
         </Row>

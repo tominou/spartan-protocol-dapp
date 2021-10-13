@@ -1,44 +1,17 @@
-import { Card, Col, Headline, Row, Tabs } from '../../../../../utils/components/Layout/Layout'
+import { Col } from '../../../../../utils/components/Layout/Layout'
 import './Overview.css'
-// import { useState } from 'react'
+import Pool from './Pool/Pool'
+import { useSelector } from 'react-redux'
 
 const Overview = () => {
-  // const [tab, setTab] = useState('pools')
-  const pools = {
-    bnb: {
-      title: 'bnb'
-    },
-    usdt: {
-      title: 'usdt'
-    },
-    btc: {
-      title: 'btc'
-    },
-    ada: {
-      title: 'ada'
-    },
-    eth: {
-      title: 'eth'
-    },
-    raven: {
-      title: 'raven'
-    },
-    usdc: {
-      title: 'usdc'
-    },
-    tttk: {
-      title: 'tttk'
-    }
-  }
-  const list = []
-  for (const p in pools) list.push(p)
+  const poolDetails = useSelector(state => state.pool?.poolDetails)
+  const list = (poolDetails || [])
+      .filter((asset) => asset.baseAmount > 0)
+      .sort((a, b) => b.baseAmount - a.baseAmount)
+  console.log('list', list)
   return (
     <Col className='Overview'>
-      {list.map(pool => (
-        <Card key={pool} title={pools[pool].title?.toUpperCase() || pool}>
-          {pools[pool].title}
-        </Card>
-      ))}
+      {list.map(asset => <Pool key={asset.address} asset={asset} />)}
     </Col>
   )
 }

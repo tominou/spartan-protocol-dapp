@@ -1,0 +1,9 @@
+.Layout-button {
+  flex-direction: row;
+  height: 40px;
+  background: var(--button2-background);
+  color: var(--button2-font-color);
+  border-radius: var(--border-radius);
+  align-items: center;
+  justify-content: center;
+}

@@ -5,4 +5,6 @@ body.theme-light {
   --navbar-item-hover-background: rgba(0, 0, 0, 0.05);
   --card-background: white;
   --button1-background: #aacdff;
+  --button2-background: black;
+  --button2-font-color: white;
 }

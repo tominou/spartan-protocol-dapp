@@ -26,14 +26,6 @@ const Pools = () => {
       <Headline size={1}>
         Pools
       </Headline>
-      <Row className='volumes' weight={1}>
-        <Card title='Total volume'>
-          15654681 volume
-        </Card>
-        <Card title='Total pooled' weight={1}>
-          15654681 pooled
-        </Card>
-      </Row>
       <Tabs className='tabs' tabs={tabs} />
     </Col>
   )

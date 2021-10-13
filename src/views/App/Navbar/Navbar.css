@@ -79,8 +79,8 @@
   }
 
   .App .Navbar.visible {
-    width: 85vw;
-    min-width: 85vw;
-    max-width: 85vw;
+    width: calc(100vw - var(--main-margin));
+    min-width: calc(100vw - var(--main-margin));
+    max-width: calc(100vw - var(--main-margin));
   }
 }

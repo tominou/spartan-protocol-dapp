@@ -1,3 +1,7 @@
+.Pools > .tabs {
+  padding-bottom: var(--main-margin);
+}
+
 .Pools > .volumes {
   margin-top: var(--main-margin);
 }

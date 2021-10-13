@@ -1,3 +1,4 @@
+import ButtonComponent from './Button/Button'
 import CardComponent from './Card/Card'
 import ColComponent from './Col/Col'
 import HeadlineComponent from './Headline/Headline'
@@ -10,11 +11,9 @@ const Layout = {
   // Col,
   // Headline,
   // Row
-}/*
-export Col
-export const Row = () => Col
-export const Headline = () => Col
-export const Card = () => Col*/
+}
+
+export const Button = (props) => <ButtonComponent {...props} />
 export const Card = (props) => <CardComponent {...props} />
 export const Col = (props) => <ColComponent {...props} />
 export const Headline = (props) => <HeadlineComponent {...props} />
