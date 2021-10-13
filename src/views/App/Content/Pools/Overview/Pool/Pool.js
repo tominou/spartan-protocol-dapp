@@ -1,5 +1,5 @@
 import { Button, Card, Col, Collapsable, Headline, Row, Tabs } from '../../../../../../utils/components/Layout/Layout'
-// import './Pool.css'
+import './Pool.css'
 import { useState } from 'react'
 import { useSelector } from 'react-redux'
 import { BN, formatFromUnits, formatFromWei } from '../../../../../../utils/bigNumber'
@@ -73,7 +73,7 @@ const Overview = ({ asset }) => {
   ]
 
   return (
-    <Card>
+    <Card className='poolItem'>
       <Row style={{ alignItems: 'center', cursor: 'pointer' }} onClick={() => setShowDetails(!showDetails)}>
         <Row>
           <img
@@ -104,29 +104,31 @@ const Overview = ({ asset }) => {
           />
         </Row>
       </Row>
-      <Collapsable collapsed={showDetails}>
-        <Col style={{ marginTop: 'var(--card-padding)' }}>
-          {details.map(info => (
-            <Row style={{ height: 30, alignItems: 'center' }}>
-              <Row weight={1} style={{ opacity: 0.5 }}>
-                {info.name}
+      <Collapsable collapsed={showDetails} className='details'>
+        <Row>
+          <Col className='info'>
+            {details.map(info => (
+              <Row style={{ height: 30, alignItems: 'center' }}>
+                <Row weight={1} style={{ opacity: 0.5 }}>
+                  {info.name}
+                </Row>
+                <Row>
+                  {info.value}
+                </Row>
               </Row>
-              <Row>
-                {info.value}
-              </Row>
-            </Row>
-          ))}
-        </Col>
-        <Row style={{ marginTop: 'var(--card-padding)' }}>
-          <Button weight={1}>
-            Bond
-          </Button>
-          <Button weight={1} style={{ marginRight: 'var(--card-padding)', marginLeft: 'var(--card-padding)' }}>
-            Join
-          </Button>
-          <Button weight={1}>
-            Swap
-          </Button>
+            ))}
+          </Col>
+          <Row className='buttons'>
+            <Button weight={1}>
+              Bond
+            </Button>
+            <Button weight={1}>
+              Join
+            </Button>
+            <Button weight={1}>
+              Swap
+            </Button>
+          </Row>
         </Row>
       </Collapsable>
     </Card>

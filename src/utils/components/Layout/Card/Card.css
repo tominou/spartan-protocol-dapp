@@ -1,15 +1,6 @@
 .Layout-card {
+  flex-direction: column;
   border-radius: var(--border-radius);
   background: var(--card-background);
   padding: var(--card-padding);
-}
-
-.Layout-card .buttonCollapse {
-  cursor: pointer;
-  transition: all 0.2s ease-out;
-  transform: rotate(180deg);
-}
-
-.Layout-card .buttonCollapse.collapsed {
-  transform: rotate(0);
 }

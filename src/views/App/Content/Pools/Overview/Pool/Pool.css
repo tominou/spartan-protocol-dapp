@@ -1,0 +1,45 @@
+.Pools .poolItem > .details > .Layout-row {
+  flex-direction: row;
+  margin-top: var(--card-padding);
+}
+
+.Pools .poolItem > .details .info {
+  flex: 2;
+}
+
+.Pools .poolItem > .details .buttons {
+  flex: 1;
+  flex-direction: column;
+  margin-left: var(--card-padding);
+}
+
+.Pools .poolItem > .details .buttons > .Layout-button {
+  margin: 0;
+  margin-top: calc(var(--card-padding) / 2);
+}
+
+@media only screen and (max-width: 640px) {
+  .Pools .poolItem > .details > .Layout-row {
+    flex-direction: column;
+    margin-top: 0;
+  }
+
+  .Pools .poolItem > .details .info {
+    margin-top: var(--card-padding);
+  }
+
+  .Pools .poolItem > .details .buttons {
+    margin-top: var(--card-padding);
+    flex-direction: row;
+    margin-left: 0;
+  }
+
+  .Pools .poolItem > .details .buttons > .Layout-button {
+    margin: 0;
+  }
+
+  .Pools .poolItem > .details .buttons > .Layout-button:nth-child(2) {
+    margin-left: var(--card-padding);
+    margin-right: var(--card-padding);
+  }
+}
