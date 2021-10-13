@@ -7,9 +7,11 @@ import { getAddresses } from '../../../../../../utils/web3'
 import { Icon } from '../../../../../../utils/components/Icons/Icons'
 // import { Tooltip } from '../../../../../../utils/components/Tooltip/tooltip'
 import { calcAPY } from '../../../../../../utils/math/nonContract'
+import { useTheme } from '../../../../../../store/ui/selector'
 
 const Overview = ({ asset }) => {
   const [showDetails, setShowDetails] = useState(false)
+  const theme = useTheme()
   const spartaPrice = useSelector(state => state.web3?.spartaPrice)
   const {
     tokenAddress,
@@ -56,10 +58,23 @@ const Overview = ({ asset }) => {
 */
   const getDepthPC = () => BN(baseAmount).div(asset.baseCap).times(100)
   // console.log('token', token)
+  // console.log('BN(baseAmount).div(asset.baseCap).times(100)', BN(baseAmount).div(asset.baseCap).times(100))
+  const details = [
+    { name: 'Volumes (24h)', value: 0 },
+    { name: 'Total depth', value: 0 },
+    { name: 'Depth SPARTA', value: '$' + formatFromWei(poolDepthUsd, 0) },
+    { name: 'TXNS', value: 0 },
+    { name: 'Revenue', value: '$' + formatFromWei(
+      BN(fees).plus(getDivis()).times(spartaPrice),
+      0,
+    ) },
+    { name: 'Fee revenue', value: formatFromWei(fees, 0) + ' SPARTA' },
+    { name: 'Dividends revenue', value: formatFromWei(getDivis(), 0) + ' SPARTA' }
+  ]
 
   return (
     <Card>
-      <Row style={{ alignItems: 'center' }}>
+      <Row style={{ alignItems: 'center', cursor: 'pointer' }} onClick={() => setShowDetails(!showDetails)}>
         <Row>
           <img
             src={token.symbolUrl}
@@ -81,18 +96,41 @@ const Overview = ({ asset }) => {
             <Row>{APY}%</Row>
           </Col>
         </Row>
+        <Row className={'buttonCollapse' + (showDetails ? ' collapsed' : '')} style={{ paddingLeft: 'var(--card-padding)', paddingRight: 'var(--card-padding)' }}>
+          <Icon
+            icon={'arrowDown'}
+            fill={theme === 'dark' ? 'white' : 'black'}
+            size={20}
+          />
+        </Row>
       </Row>
-      <Row style={{ marginTop: 'var(--card-padding)' }}>
-        <Button weight={1}>
-          Bond
-        </Button>
-        <Button weight={1} style={{ marginRight: 'var(--card-padding)', marginLeft: 'var(--card-padding)' }}>
-          Join
-        </Button>
-        <Button weight={1}>
-          Swap
-        </Button>
-      </Row>
+      {!!showDetails &&
+        <Col style={{ marginTop: 'var(--card-padding)' }}>
+          {details.map(info => (
+            <Row style={{ height: 30, alignItems: 'center' }}>
+              <Row weight={1} style={{ opacity: 0.5 }}>
+                {info.name}
+              </Row>
+              <Row>
+                {info.value}
+              </Row>
+            </Row>
+          ))}
+        </Col>
+      }
+      {!!showDetails &&
+        <Row style={{ marginTop: 'var(--card-padding)' }}>
+          <Button weight={1}>
+            Bond
+          </Button>
+          <Button weight={1} style={{ marginRight: 'var(--card-padding)', marginLeft: 'var(--card-padding)' }}>
+            Join
+          </Button>
+          <Button weight={1}>
+            Swap
+          </Button>
+        </Row>
+      }
     </Card>
   )
 }
