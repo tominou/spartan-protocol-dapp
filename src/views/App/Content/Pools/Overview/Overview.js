@@ -1,4 +1,4 @@
-import { Col } from '../../../../../utils/components/Layout/Layout'
+import { Row } from '../../../../../utils/components/Layout/Layout'
 import './Overview.css'
 import Pool from './Pool/Pool'
 import { useSelector } from 'react-redux'
@@ -10,9 +10,9 @@ const Overview = () => {
       .sort((a, b) => b.baseAmount - a.baseAmount)
   console.log('list', list)
   return (
-    <Col className='Overview'>
+    <Row className='Overview'>
       {list.map(asset => <Pool key={asset.address} asset={asset} />)}
-    </Col>
+    </Row>
   )
 }
 
