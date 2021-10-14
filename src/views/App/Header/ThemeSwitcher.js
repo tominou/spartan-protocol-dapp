@@ -14,6 +14,7 @@ const ThemeSwitcher = () => {
     // console.log('theme', theme)
     document.body.classList.add(theme === 'dark' ? 'theme-dark' : 'theme-light')
     document.body.classList.remove(theme === 'dark' ? 'theme-light' : 'theme-dark')
+    document.querySelector('meta[name="theme-color"]').setAttribute('content',  theme === 'dark' ? '#25212D' : '#ffffff');
     window.localStorage.setItem('theme', theme)
   }, [theme])
 
