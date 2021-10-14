@@ -4,7 +4,7 @@ const Liquidity = () => {
   return (
     <Col>
       <Row>
-        <Row weight={1} style={{ background: 'var(--card-background)', borderRadius: 'var(--border-radius)', marginRight: 'var(--main-margin)' }}>Sort</Row>
+        <Row weight={1} />
         <Button>+ Add liquidity</Button>
       </Row>
       <Card style={{ marginTop: 'var(--main-margin)' }}>

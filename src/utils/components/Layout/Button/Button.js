@@ -16,7 +16,7 @@ const Button = (props) => {
   if (className) newProps.className += ' ' + className
   if (weight) newProps.style.flex = weight
 
-  console.log('Button PROPS', newProps)
+  // console.log('Button PROPS', newProps)
 
   return (
     <Row {...newProps} />

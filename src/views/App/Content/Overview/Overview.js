@@ -1,4 +1,4 @@
-import { Button, Card, Col, Row, Tabs } from '../../../../utils/components/Layout/Layout'
+import { Button, Card, Col, Headline, Row, Tabs } from '../../../../utils/components/Layout/Layout'
 import './Overview.css'
 import Liquidity from './Liquidity/Liquidity'
 
@@ -21,11 +21,10 @@ const Overview = () => {
   return (
     <Col className='Overview'>
       <Row className='info'>
-        <Card className='weight' weight={1}>
-          <Card.Title>Your weight</Card.Title>
-          <Card.Body style={{ marginTop: 'var(--main-margin)' }}>
-            <Col>
-              <Row>XXXXXX SPARTA</Row>
+        <Card className='weight' weight={1} style={{ padding: 'calc(var(--card-padding) * 2) 0 calc(var(--card-padding) * 2) 0' }}>
+          <Card.Body>
+            <Col style={{ alignItems: 'center' }}>
+              <Headline size={3}>XXXXXX SPARTA</Headline>
               <Row style={{ opacity: 0.5 }}>~XXXXXX USD</Row>
             </Col>
           </Card.Body>

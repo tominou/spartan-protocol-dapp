@@ -19,11 +19,11 @@
 
 .App > .Header > .toolbar > .token > .price > .icon-arrow {
   margin-right: 8px;
-  margin-left: 10px;
+  margin-left: -2px;
 }
 
 .App > .Header > .toolbar > .token > .price > .icon-fee {
-  margin-right: 10px;
+  margin-right: -2px;
   margin-left: 4px;
   margin-top: -3px;
 }
