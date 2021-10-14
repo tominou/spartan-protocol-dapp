@@ -81,4 +81,15 @@
     right: 0px;
     opacity: 0;
   }
+
+  .App > .Header > .toolbar > .button {
+    min-width: 38px;
+    height: 40px;
+    background: transparent;
+    border-radius: 0;
+    margin-left: 0;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
 }

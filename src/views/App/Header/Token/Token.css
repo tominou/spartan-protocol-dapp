@@ -12,9 +12,7 @@
 }
 
 .App > .Header > .toolbar > .token > .price {
-  background: var(--button1-background);
   height: 40px;
-  border-radius: var(--border-radius);
   align-items: center;
   flex-direction: row;
 }

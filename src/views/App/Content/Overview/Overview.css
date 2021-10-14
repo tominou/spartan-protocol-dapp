@@ -1,0 +1,24 @@
+.View > .Overview > .info {
+  align-items: flex-start;
+}
+
+.View > .Overview > .info > :last-child {
+  margin-left: var(--main-margin);
+}
+
+.View > .Overview > .tabs {
+  padding-bottom: var(--main-margin);
+  margin-top: var(--main-margin);
+}
+
+@media only screen and (max-width: 640px) {
+  .View > .Overview > .info {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .View > .Overview > .info > :last-child {
+    margin-top: var(--main-margin);
+    margin-left: 0;
+  }
+}

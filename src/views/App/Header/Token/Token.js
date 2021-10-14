@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 import './Token.css'
 import FeeIcon from './FeeIcon'
 import { Icon } from '../../../../utils/components/Icons/Icons'
-import { Row } from '../../../../utils/components/Layout/Layout'
+import { Button, Row } from '../../../../utils/components/Layout/Layout'
 import { useTheme } from '../../../../store/ui/selector'
 import { useSelector } from 'react-redux'
 import {
@@ -21,7 +21,7 @@ const Token = () => {
   return (
     <Row className="token">
       <Row className="address">0xe4ae305ebe1ab...</Row>
-      <Row className="price">
+      <Button type={2} className="price">
         <Icon
           icon="arrowDown"
           fill={theme === 'dark' ? 'white' : 'black'}
@@ -30,7 +30,7 @@ const Token = () => {
         />
         <Row className="value">${formatFromUnits(spartaPrice, 2)}</Row>
         <FeeIcon />
-      </Row>
+      </Button>
     </Row>
   )
 }

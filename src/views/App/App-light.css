@@ -4,7 +4,8 @@ body.theme-light {
   --navbar-background: white;
   --navbar-item-hover-background: rgba(0, 0, 0, 0.05);
   --card-background: white;
-  --button1-background: #aacdff;
-  --button2-background: black;
+  --button1-background: linear-gradient(to right, #fb2715, #a32d5b);
+  --button1-font-color: white;
+  --button2-background: var(--content-background);
   --button2-font-color: white;
 }

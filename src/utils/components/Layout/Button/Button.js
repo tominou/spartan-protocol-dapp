@@ -1,7 +1,8 @@
+import { Row } from '../Layout'
 import './Button.css'
 
 const Button = (props) => {
-  const { className, style, weight } = props
+  const { className, style, weight, type } = props
 
   const newProps = {
     children: props.children || null,
@@ -10,13 +11,15 @@ const Button = (props) => {
     onClick: props.onClick || null
   }
 
+  newProps.className += ' type-' + (type || '1')
+
   if (className) newProps.className += ' ' + className
   if (weight) newProps.style.flex = weight
 
-  // console.log('Row PROPS', newProps)
+  console.log('Button PROPS', newProps)
 
   return (
-    <div {...newProps} />
+    <Row {...newProps} />
   )
 }
 

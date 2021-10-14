@@ -14,12 +14,12 @@ const Layout = {
   // Row
 }
 
-export const Button = (props) => <ButtonComponent {...props} />
-export const Card = (props) => <CardComponent {...props} />
-export const Col = (props) => <ColComponent {...props} />
-export const Collapsable = (props) => <CollapsableComponent {...props} />
-export const Headline = (props) => <HeadlineComponent {...props} />
-export const Row = (props) => <RowComponent {...props} />
-export const Tabs = (props) => <TabsComponent {...props} />
+export const Button = ButtonComponent
+export const Card = CardComponent
+export const Col = ColComponent
+export const Collapsable = CollapsableComponent
+export const Headline = HeadlineComponent
+export const Row = RowComponent
+export const Tabs = TabsComponent
 
 export default Layout

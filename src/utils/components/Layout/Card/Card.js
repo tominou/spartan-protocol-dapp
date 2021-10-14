@@ -1,9 +1,8 @@
-import { Component } from 'react'
 import './Card.css'
 import { Col, Headline, Row } from '../Layout'
 
 const Card = (props) => {
-  const { children, className, style, title, onClick } = props
+  const { children, className, style, onClick } = props
 
   const newProps = {
     children: children || null,
@@ -15,23 +14,13 @@ const Card = (props) => {
   if (className) newProps.className += ' ' + className
 
   return (
-    <div {...newProps} weight={1}>
-      {!!title &&
-        <Row style={{ marginBottom: 'var(--card-padding)' }}>
-          <Headline size={3}>{title}</Headline>
-        </Row>
-      }
+    <Col {...newProps} weight={1}>
       {newProps.children}
-    </div>
+    </Col>
   )
 }
 
-class CardClass extends Component {
-  // static Collapse = Collapse
+Card.Body = (props) => <Col {...props || {}} />
+Card.Title = (props) => <Headline {...props || {}} size={3} />
 
-  render () {
-    return <Card {...this.props} />
-  }
-}
-
-export default CardClass
+export default Card

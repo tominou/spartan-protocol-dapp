@@ -3,12 +3,14 @@ import { Col, Row } from '../../../utils/components/Layout/Layout'
 import { Route, Switch, Redirect } from 'react-router-dom'
 import { routes } from '../../../routes'
 import Liquidity from './Liquidity/Liquidity'
+import Overview from './Overview/Overview'
 import Pools from './Pools/Pools'
 
 const Content = () => {
 
   const components = {
-    '/home': Pools,
+    '/home': Overview,
+    '/pools': Pools,
     '/liquidity': Liquidity,
     '/swap': Pools,
     '/synths': Pools,

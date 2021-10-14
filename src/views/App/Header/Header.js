@@ -1,6 +1,7 @@
 import './Header.css'
 import { Icon } from '../../../utils/components/Icons/Icons'
 import { Headline, Row } from '../../../utils/components/Layout/Layout'
+import Language from './Language'
 import ThemeSwitcher from './ThemeSwitcher'
 import Token from './Token/Token'
 import { useNavbarVisibility, useTheme } from '../../../store/ui/selector'
@@ -33,9 +34,15 @@ const Header = () => {
       </Row>
       <div style={{ flex: 1 }} />
       <Row className='toolbar'>
-        <div className="button"></div>
-        <div className="button"></div>
         <ThemeSwitcher />
+        <Language />
+        <Row className="button">
+          <Icon
+            icon="walletRed"
+            fill={'#aacdff'}
+            size="24"
+          />
+        </Row>
         <Token />
       </Row>
     </Row>

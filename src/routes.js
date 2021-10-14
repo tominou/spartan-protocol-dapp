@@ -18,6 +18,13 @@ export const routes = [
     layout: ''
   },
   {
+    path: '/pools',
+    name: 'pools',
+    icon: 'home',
+    // component: Home,
+    layout: ''
+  },
+  {
     path: '/liquidity',
     name: 'liquidity',
     icon: 'sword',

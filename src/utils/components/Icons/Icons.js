@@ -36,6 +36,7 @@ import { ReactComponent as Swords } from '../../../assets/icons/swords.svg'
 import { ReactComponent as Synth } from '../../../assets/icons/synth.svg'
 import { ReactComponent as Upgrade } from '../../../assets/icons/upgrade.svg'
 import { ReactComponent as Vault } from '../../../assets/icons/vault.svg'
+import { ReactComponent as WalletGreen } from '../../../assets/icons/wallet-green.svg'
 import { ReactComponent as WalletRed } from '../../../assets/icons/wallet-red.svg'
 // SOCIALS
 import { ReactComponent as Discord } from '../../../assets/brands/discord.svg'
@@ -101,6 +102,7 @@ const icons = {
   synth: Synth,
   upgrade: Upgrade,
   vault: Vault,
+  walletGreen: WalletGreen,
   walletRed: WalletRed,
   // SOCIALS
   discord: Discord,
